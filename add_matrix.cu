@@ -44,6 +44,7 @@ __global__ void addMatrixKernel(float* d_a, float* d_b, float* d_c) {
     for (int i = start_idx; i < start_idx + MAT_SIZE; i++) {
         d_c[i] = d_a[i] + d_b[i];
     }
+    printf("Thread %d %d\n", ix, iy);
 }
 
 cudaError_t addMatrix(float* a, float* b, float* c, uint32_t size) {
@@ -69,6 +70,7 @@ cudaError_t addMatrix(float* a, float* b, float* c, uint32_t size) {
     dim3 block_dim(5);
 
     addMatrixKernel << <grid_dim, block_dim >> > (d_a, d_b, d_c);
+    printf("Kernel launched, and the control right was returned to host code.\n");
 
     cudaDeviceSynchronize();
 

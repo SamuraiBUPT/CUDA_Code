@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{23995DC4-03DA-4254-809C-161F759F5C20}</ProjectGuid>
     <RootNamespace>Cuda_Tutorial</RootNamespace>
+    <CudaToolkitCustomDir>..\..\..\Compiler\cuda-toolkit-wsl</CudaToolkitCustomDir>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -55,6 +56,7 @@
     </Link>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Include>D:\Code_Space\Compiler\cuda-toolkit-wsl\include;%(Include)</Include>
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -78,12 +80,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CudaCompile Include="add_matrix.cu" />
+    <CudaCompile Include="add_reduce.cu" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add_matrix.h" />
+    <ClInclude Include="add_reduce.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
