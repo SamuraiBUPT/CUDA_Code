@@ -81,6 +81,7 @@
   <ItemGroup>
     <CudaCompile Include="add_matrix.cu" />
     <CudaCompile Include="add_reduce.cu" />
+    <CudaCompile Include="bank_conflict.cu" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -88,6 +89,7 @@
   <ItemGroup>
     <ClInclude Include="add_matrix.h" />
     <ClInclude Include="add_reduce.h" />
+    <ClInclude Include="bank_conflict.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
