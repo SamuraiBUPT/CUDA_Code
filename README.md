@@ -4,3 +4,4 @@
 目前已经实现的kernel有：
 
 - add_matrix: 矩阵加法kernel
+- add_reduce: 归约加法kernel，具体的优化有：使用归约方法（相邻归约、交叉配对归约），并且初步接触unroll思想。_
